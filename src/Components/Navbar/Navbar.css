@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+.logo {
+    width: 60px;
+}
+.container {
+    background-color: rgb(83, 83, 216);
+}
+
+.nav li {
+    margin: 0 0.5rem;
+    padding: 0 0.4rem;
+}
+
+.nav li a {
+    font-size: 1rem;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav li:last-child {
+    
+    color: white !important;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+}
+
+.navbar-cart {
+    background: #fff;
+    width: 180px;
+    border: none;
+    /* display: flex;
+    justify-content: space-between; */
+    align-items: center;
+    padding: 0.1rem;
+    cursor: pointer;
+    height: 50px;
+  }
+
+  .navbar-cart:hover {
+    opacity: 0.75;
+  }
+  
+  .cart-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--dark-color);
+  }
+  
+  .cart-image {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  
+  .cart-counter {
+    height: 20px;
+    width: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    color: var(--dark-color);
+    background: rgb(199, 189, 189);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cart-container {
+      color: black !important;
+      display: flex;
+      justify-content: space-between;
+      width: 100px;
+      padding: 3px;
+      background-color: white;
+      border: 1px solid rgb(7, 6, 12)
+  }
