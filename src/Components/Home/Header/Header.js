@@ -8,7 +8,7 @@ const Header = ({ products }) => {
     const firstThreeProducts = shuffled.slice(0, 3);
     return (
         <header>
-            <h3 className="m-5">Fulfill Your Daily Needs</h3>
+            <h3 className="m-5">Make Yourself Better Than Before!</h3>
             <hr/>
             <div className="row m-5">
                 <div className="col-md-3"><img height='300' width='300' src={firstThreeProducts[0].image} alt=""/></div>

@@ -8,7 +8,7 @@ const Newsletter = () => {
             <div className="row mt-5 mb-5">
                 <div className="col-md-6">
                     <h1>Newsletter</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolor asperiores a exercitationem distinctio, placeat voluptatum quas modi tempora saepe.</p>
+                    <p>Stay with us to get new updates, discount and to follow trends. Get in Touch via email.</p>
                 </div>
                 <div className="col-md-6 mt-5">
                     <Form className="inline">
