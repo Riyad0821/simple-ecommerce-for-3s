@@ -1,14 +1,38 @@
-import './App.css';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './Components/Navbar/Navbar';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
+import './App.css';
+
+import { connect } from 'react-redux';
+
+import Navbar from './Components/Home/Navbar/Navbar';
+import Products from './Components/Shop/Products/Products';
+import Cart from './Components/Cart/Cart/Cart';
 import Home from './Components/Home/Home/Home';
 
-function App() {
+function App({ current }) {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/products" component={Products} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    current: state.shop.currentItem,
+  };
+};
+export default connect(mapStateToProps)(App);

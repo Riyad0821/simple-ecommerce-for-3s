@@ -1,19 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
 .logo {
-    width: 60px;
+    width: 100px;
 }
 .container {
-    background-color: rgb(83, 83, 216);
+    background-color: rgb(228, 210, 210);
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .nav li {
     margin: 0 0.5rem;
-    padding: 0 0.4rem;
+    padding: 0.5rem 0.4rem;
 }
 
 .nav li a {
     font-size: 1rem;
-    color: white;
+    color: black;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     font-weight: 500;
@@ -38,10 +40,6 @@
     height: 50px;
   }
 
-  .navbar-cart:hover {
-    opacity: 0.75;
-  }
-  
   .cart-title {
     font-size: 15px;
     font-weight: bold;
@@ -57,10 +55,10 @@
   .cart-counter {
     height: 20px;
     width: 20px;
-    border: 1px solid black;
+    border: 1px solid rgb(2, 2, 10);
     border-radius: 50%;
     color: var(--dark-color);
-    background: rgb(199, 189, 189);
+    background-color: rgb(199, 189, 189);
     font-size: 15px;
     display: flex;
     justify-content: center;
@@ -72,7 +70,17 @@
       display: flex;
       justify-content: space-between;
       width: 100px;
-      padding: 3px;
+      height: 40px;
+      padding: 6px 3px;
       background-color: white;
-      border: 1px solid rgb(7, 6, 12)
+      border: 2px solid #0275d8
   }
+  
+  .cart-container:hover {
+    opacity: 0.75;
+  }
+.search-box {
+  height: 40px;
+  width: 250px;
+}
+  

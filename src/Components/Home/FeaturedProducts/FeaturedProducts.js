@@ -2,7 +2,6 @@ import React from 'react';
 import './FeaturedProducts.css';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import toy1 from '../../../images/toy1.jpg';
 
 const responsive = {
     desktop: {
@@ -22,9 +21,11 @@ const responsive = {
     }
 };
 
-const FeaturedProducts = () => {
+const FeaturedProducts = ({ products }) => {
+    const shuffled = products.sort(() => 0.5 - Math.random());
+    const firstFourProducts = shuffled.slice(0, 4);
     return (
-        <div className="carousel-container">
+        <section className="carousel-container">
             <h3 className="m-5">Featured Products</h3>
             <Carousel
                 swipeable={false}
@@ -45,24 +46,28 @@ const FeaturedProducts = () => {
                 itemClass="carousel-item-padding-40-px"
             >
                 <div>
-                    <img src={toy1} alt="" />
-                    <h5>Product 1</h5>
+                    <img height='400' width='500' src={firstFourProducts[0].image} alt="" />
+                    <h5 className="mt-3">{firstFourProducts[0].title}</h5>
+                    <h5>$ {firstFourProducts[0].price}</h5>
                 </div>
                 <div>
-                    <img src={toy1} alt="" />
-                    <h5>Product 2</h5>
+                    <img height='400' width='500' src={firstFourProducts[1].image} alt="" />
+                    <h5 className="mt-3">{firstFourProducts[1].title}</h5>
+                    <h5>$ {firstFourProducts[1].price}</h5>
                 </div>
                 <div>
-                    <img src={toy1} alt="" />
-                    <h5>Product 3</h5>
+                    <img height='400' width='500' src={firstFourProducts[2].image} alt="" />
+                    <h5 className="mt-3">{firstFourProducts[2].title}</h5>
+                    <h5>$ {firstFourProducts[2].price}</h5>
                 </div>
                 <div>
-                    <img src={toy1} alt="" />
-                    <h5>Product 4</h5>
+                    <img height='400' width='500' src={firstFourProducts[3].image} alt="" />
+                    <h5 className="mt-3">{firstFourProducts[3].title}</h5>
+                    <h5>$ {firstFourProducts[3].price}</h5>
                 </div>
             </Carousel>;
             <hr />
-        </div>
+        </section>
     );
 };
 
